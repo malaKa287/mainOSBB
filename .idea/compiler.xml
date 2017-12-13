@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="registration_security_v1.0" />
+        <module name="OSBB" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="registration_security_v1.0" target="1.8" />
+      <module name="OSBB" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

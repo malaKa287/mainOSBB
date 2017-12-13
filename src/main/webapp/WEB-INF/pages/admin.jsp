@@ -1,15 +1,10 @@
-<%@include file="tmp/header.jsp"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 
-admin
-<br>
-<br>
 
-${user}
-<br>
-<br>
-<br>
 
-<<a href="/logout">logout</a>
 
-<%@include file="tmp/footer.jsp"%>
-
+<%@include file="tmp/head.jsp" %>
+<%@include file="tmp/navbar.jsp" %>
+<%@include file="admin/admin-inputNewsAndVoting-Admin.jsp" %>
+<%@include file="tmp/footer.jsp" %>
