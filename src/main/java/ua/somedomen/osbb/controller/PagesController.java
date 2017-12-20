@@ -35,14 +35,7 @@ public class PagesController {
 
     @GetMapping("/")
 
-    public String index(Model model, Principal principal) {
-
-        Object currentUser = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        if (currentUser instanceof UserDetails) {
-            String username = ((UserDetails) currentUser).getUsername();
-        } else {
-            String username = currentUser.toString();
-        }
+    public String index(Model model) {
 
         model.addAttribute("newsShowAll", newsService.findALL());
         return "index";
