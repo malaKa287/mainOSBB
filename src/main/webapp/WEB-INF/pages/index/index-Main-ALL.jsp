@@ -14,11 +14,6 @@
             </div>
         </div>
 
-        <%--<c:forEach items="${newsShowAll}" var="News">--%>
-        <%--<h1>${News.newsName}</h1>--%>
-        <%--</c:forEach>--%>
-
-
         <c:forEach items="${newsShowAll}" var="News">
             <div class="row one-news">
                 <div class="col-lg-4 col-md-6 col-sm-6">

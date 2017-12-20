@@ -29,9 +29,9 @@
 
                 <div class="col-lg-8 col-md-6 col-sm-6">
                     <h1>
-                        <a href="/newsPage">Ім'я новини:${News.newsName}</a>
+                        <p>${News.newsName}</p>
                     </h1>
-                    <p>Текст новини:${News.newsText}</p>
+                    <p>${News.newsText}</p>
 
                     <%@include file="outputNews/outputNewsComment.jsp" %>
 
@@ -42,6 +42,5 @@
         </c:forEach>
 
 
-    </div>
     </div>
 </section>

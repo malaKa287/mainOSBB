@@ -19,7 +19,7 @@ public class Comments {
     private String commentValue;
     private String time;
     private String userName;
-    @ManyToOne
+    @ManyToOne()
     private News news;
 
 
