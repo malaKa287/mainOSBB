@@ -5,3 +5,5 @@
   
   Сайт буде написаний на Java, стилізація - javascript, html&css.
   Задіяні технології: Spring MVC, Spring Security, tomcat, hibernate
+  
+  Для запуску треба налаштувати і створити базу даних з назвою, як в проекті - файл resources --> db.properties 
