@@ -1,9 +1,4 @@
 # mainOSBB
-
-Проект - сайт ОСББ будинку.
-  Користувачі сайту ( мешканці будинку ) зможуть переглядати новини, проводити голосування, пропонувати новини, оплачувати комунальні послуги.
-  
-  Сайт буде написаний на Java, стилізація - javascript, html&css.
-  Задіяні технології: Spring MVC, Spring Security, tomcat, hibernate
-  
-  Для запуску треба налаштувати і створити базу даних з назвою, як в проекті - файл resources --> db.properties 
+ 
+ java, javascript, html&css.
+ Spring MVC, Spring Security, tomcat, hibernate, MySQL, maven
