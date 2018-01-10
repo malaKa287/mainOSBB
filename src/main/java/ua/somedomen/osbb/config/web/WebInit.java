@@ -10,9 +10,10 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
-public class WebInit implements WebApplicationInitializer{
+public class WebInit implements WebApplicationInitializer{ //We use this class for
 
-    public void onStartup(ServletContext servletContext) throws ServletException {
+    public void onStartup(ServletContext servletContext) throws ServletException { //We make a (super)main servlet, something what can get all pages.
+
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(WebConfig.class);
 

@@ -5,8 +5,10 @@
 
 
 <div class=img_elastic1" id="headerwrap">
+<%--modelAttribute - перекидає дані на метод в pages controller--%>
     <form:form method="POST" modelAttribute="userForm" class="form-signin" >
         <h2 class="form-signin-heading">Створити акаунт</h2>
+        <%-- spring:bind - надає інфу по полю в path ( дає метод status )--%>
         <spring:bind path="username">
             <div class="form-group ${status.error ? 'has-error' : ''}">
                 <form:input type="text" path="username" class="form-control" placeholder="Логін"

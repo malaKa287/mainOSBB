@@ -1,22 +1,18 @@
 package ua.somedomen.osbb.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import ua.somedomen.osbb.entity.Comments;
-import ua.somedomen.osbb.entity.News;
 import ua.somedomen.osbb.entity.securityEntity.User;
 import ua.somedomen.osbb.service.NewsService;
+import ua.somedomen.osbb.service.StatusService;
 import ua.somedomen.osbb.service.UserService;
+import ua.somedomen.osbb.service.VotingService;
 import ua.somedomen.osbb.validator.UserValidator;
 
 import java.security.Principal;
-import java.util.Date;
-import java.util.List;
 
 
 @Controller
@@ -25,21 +21,29 @@ public class PagesController {
     @Autowired
     private UserService userService;
 
-
     @Autowired
     private UserValidator userValidator;
 
     @Autowired
+    private VotingService votingService;
+
+    @Autowired
     private NewsService newsService;
 
+    @Autowired
+    private StatusService statusService;
 
-    @GetMapping("/")
+@GetMapping("/")
+public String index(Model model/*, Principal principal*/) {
+//        User byUsername = userService.findByUsername(principal.getName());
 
-    public String index(Model model) {
+//      model.addAttribute("user", principal.getName());
+    model.addAttribute("statusShowAll", statusService.findAll());
+    model.addAttribute("votingShowAll", votingService.findALL());
+    model.addAttribute("newsShowAll", newsService.findALL());
+    return "index";
+}
 
-        model.addAttribute("newsShowAll", newsService.findALL());
-        return "index";
-    }
 
     @GetMapping("/admin")
     public String loginAdm(Principal principal, Model model) {
@@ -91,5 +95,9 @@ public class PagesController {
         return "cabinet";
     }
 
-
+    @GetMapping("newsPage-{id}")
+    public String newsPage(@PathVariable("id") int id, Model model){
+        model.addAttribute("News", newsService.findOne(id));
+        return "newsPage";
+    }
 }

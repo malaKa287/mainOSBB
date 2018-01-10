@@ -28,10 +28,10 @@
 
 
                 <div class="col-lg-8 col-md-6 col-sm-6">
-                    <h1>
-                        <p>${News.newsName}</p>
-                    </h1>
-                    <p>${News.newsText}</p>
+                    <h1><a href="/newsPage-${News.id}">${News.newsName}</a></h1>
+                    <p>${News.newsTime}</p>
+                    <p>Текст новини: ${News.newsShort}</p>
+                    <p>Текст новини: ${News.newsText}</p>
 
                     <%@include file="outputNews/outputNewsComment.jsp" %>
 
@@ -40,7 +40,5 @@
 
             </div>
         </c:forEach>
-
-
     </div>
 </section>

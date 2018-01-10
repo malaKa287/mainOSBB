@@ -7,6 +7,7 @@
 
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <!-- При зменшенні екрану, всі вкладки меню перетворюються в кнопку з випадаючим меню -->
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -25,9 +26,15 @@
                     <li class="active"><a href="/logout"> Вийти </a></li>
                 </sec:authorize>
 
+                <li><a href="#">Архів</a></li>
+
                 <sec:authorize access="hasAnyRole('USER')">
-                    <li><a href="/cabinet"><i class="fa fa-envelope-o" aria-hidden="true">Кабінет</i></a></li>
+                    <li><a href="/cabinet"><i class="fa fa-envelope-o" aria-hidden="true">Cabinet</i></a></li>
                 </sec:authorize>
+
+
+                <%--Значок голосування, який буде зявлятись, коли є нове голосування--%>
+                <li><a href="/"></a></li>
             </ul>
         </div>
     </div>

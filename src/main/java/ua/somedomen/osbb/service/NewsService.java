@@ -8,10 +8,11 @@ public interface NewsService {
 
     void addNews(News news);
 
+//    void addNewsComment(News news);
 
     List<News> findALL();
 
-    News findOne(int newsId);
+    News findOne(int id);
 
     News save(News newsName);
 }

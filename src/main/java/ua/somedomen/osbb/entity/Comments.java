@@ -1,15 +1,18 @@
 package ua.somedomen.osbb.entity;
 
+
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import ua.somedomen.osbb.entity.News;
 
 import javax.persistence.*;
+import javax.xml.ws.soap.MTOM;
 
 @Entity
 @Getter
 @Setter
+@ToString
 public class Comments {
 
     @Id
@@ -19,7 +22,8 @@ public class Comments {
     private String commentValue;
     private String time;
     private String userName;
-    @ManyToOne()
+
+    @ManyToOne
     private News news;
 
 
@@ -42,15 +46,5 @@ public class Comments {
     }
 
     public Comments() {
-    }
-
-
-    @Override
-    public String toString() {
-        return "Comments{" +
-                "id=" + id +
-                ", commentValue='" + commentValue + '\'' +
-                ", time='" + time + '\'' +
-                '}';
     }
 }

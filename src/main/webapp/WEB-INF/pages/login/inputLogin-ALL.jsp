@@ -5,6 +5,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <div class=img_elastic1" id="headerwrap">
+    <%--Параметр action указывает на адрес страницы, на которую мы будем передавать наши данные.--%>
     <form method="POST" action="/login" class="form-signin">
         <h2 class="form-heading">Вхід</h2>
 
