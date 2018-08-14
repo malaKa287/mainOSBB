@@ -16,7 +16,6 @@ public class VotingServiceImpl implements VotingService {
     @Autowired
     private VotingDAO votingDAO;
 
-
     @Override
     public Voting save(Voting voting) {
         return votingDAO.save(voting);
@@ -32,9 +31,13 @@ public class VotingServiceImpl implements VotingService {
         return votingDAO.findOne(votingId);
     }
 
-    @Override
-    public Voting findByVotingAndUserId(int id, String username) {
-        return votingDAO.findByVotingAndUserId(id, username);
-    }
+//    @Override
+//    public Voting findByVotingAndUserId(int id, String username) {
+//        return votingDAO.findByVotingAndUserId(id, username);
+//    }
 
+    @Override
+    public void delete(int id) {
+        votingDAO.delete(id);
+    }
 }
